@@ -1,0 +1,26 @@
+@use 'color';
+
+
+.mat-tab-label {
+  color: color.$Page_Background;
+  font-size: 13px;
+}
+
+.mat-tab-label.mat-tab-label-active {
+   color: color.$CTA_Text2;
+}
+
+/* ink bar style */
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background: color.$CTA_Text2;
+  height: 2px;
+}
+
+.mat-divider {
+  border-top-color: color.$transparent_Background_3;
+}
+
+
+
+
+

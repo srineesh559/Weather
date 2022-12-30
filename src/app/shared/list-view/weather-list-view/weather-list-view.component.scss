@@ -1,0 +1,83 @@
+@use "../../../../assets/sass/variables";
+@use "../../../../assets/sass/color";
+
+* {
+  box-sizing: border-box;
+}
+
+.list-border {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 78px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba($color: rgb(255, 255, 255), $alpha: 0.1);
+}
+
+.list-start {
+  display: flex;
+  flex: 1;
+  font-family: variables.$font-family-medium;
+  font-size: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
+  flex-basis: 25%;
+  //background-color: red;
+}
+
+.list-middle {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list-last {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.weather-status-icon {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.degree {
+  display: flex;
+  padding-left: 32px;
+  font-family: variables.$font-family-medium;
+  font-size: 32px;
+  color: color.$Text_secondary;
+  align-items: flex-end;
+}
+
+.temperature {
+  display: flex;
+  padding-left: 32px;
+  font-family: variables.$font-family-regular;
+  font-size: 18px;
+  color: color.$Text_secondary;
+  align-items: flex-end;
+}
+
+.degree-symbol {
+  color: color.$Text_secondary;
+}
+
+.transparent-button {
+  background-color: color.$transparent;
+  border: 0px;
+}
+
+button:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,133 @@
+@use "../../../assets/sass/variables";
+@use "../../../assets/sass/color";
+
+* {
+  box-sizing: border-box;
+}
+
+.mat-divider {
+  border-top-color: rgb(255, 255, 255, 0.3);
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 47px;
+}
+
+.detail-center-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 290px;
+  width: 100%;
+  padding-top: 47px;
+  //background-color: red;
+}
+
+.item-1 {
+  height: 34px;
+  font-family: variables.$font-family-medium;
+  font-size: 20px;
+  color: color.$Text_secondary;
+}
+
+.item-2 {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  font-family: variables.$font-family-medium;
+  font-size: 13px;
+  color: color.$Text_secondary;
+}
+
+.add-button {
+  padding-left: 7px;
+}
+
+p,
+h1 {
+  color: color.$Text_secondary;
+}
+
+.detail-temperature {
+  font-family: variables.$font-family-medium;
+  font-size: 64px;
+  padding: 30px;
+}
+
+.temperature-desc {
+  font-family: variables.$font-family-regular;
+  font-size: 22px;
+  padding: 0px;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.transparent-button {
+  background-color: color.$transparent;
+  border: 0px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.convert-button {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 30px;
+  width: 55px;
+  background: transparent;
+  border: 3px solid color.$Text_secondary;
+  border-radius: 4px;
+}
+
+.degree {
+  width: 100%;
+  display: flex;
+  font-family: variables.$font-family-regular;
+  font-size: 19px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  border: 0px;
+}
+
+.item1 {
+  background-color: color.$Text_secondary;
+  color: color.$CTA_Text1;
+}
+
+.item2 {
+  background-color: color.$transparent;
+  color: color.$Text_secondary;
+}
+
+.detail-column {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  // background-color: yellow;
+}
+
+.detail-group {
+  padding-bottom: 66px;
+}

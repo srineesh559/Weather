@@ -1,0 +1,32 @@
+<div
+  class="list-page-nothing"
+  *ngIf="cityclimate && cityclimate.length <= 0; else showList"
+>
+  <div class="list-page-item">
+    <img src="assets/images/icons/icon_nothing.svg" />
+  </div>
+  <div class="list-page-item">
+    <span>{{ errorMessage }}</span>
+  </div>
+</div>
+
+<ng-template #showList>
+  <div class="list-page-toolbar">
+    <p class="toolbar item1">{{ status }}</p>
+    <button type="button" class="transparent-button" (click)="removall()">
+      <p class="toolbar item2">{{ buttonName }}</p>
+    </button>
+  </div>
+  <ul class="weather-list" style="list-style-type: none">
+    <li *ngFor="let weather of cityclimate">
+      <button type="button" class="cell-button" (click)="Click(weather)">
+        <div class="row">
+          <app-weather-list-view
+            [cityclimate]="weather"
+            (favouritebtnClick)="changeFavourite($event)"
+          ></app-weather-list-view>
+        </div>
+      </button>
+    </li>
+  </ul>
+</ng-template>

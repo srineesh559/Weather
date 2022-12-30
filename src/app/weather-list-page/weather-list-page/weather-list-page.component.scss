@@ -1,0 +1,70 @@
+@use "../../../assets/sass/variables";
+@use "../../../assets/sass/color";
+
+.list-page-nothing {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+.list-page-toolbar {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30px;
+  padding-top: 0px;
+}
+
+.toolbar.item2 {
+  font-family: variables.$font-family-medium;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.toolbar.item1 {
+  font-family: variables.$font-family-regular;
+  font-size: 13px;
+  color: color.$Text_secondary;
+  text-align: center;
+  padding: 15px;
+}
+
+.list-page-item {
+  display: flex;
+  padding: 10px;
+  font-family: variables.$font-family-medium;
+  font-size: 18px;
+  color: color.$Text_secondary;
+  align-items: center;
+}
+
+.weather-list {
+  padding: 0px;
+}
+
+.transparent-button {
+  background-color: color.$transparent;
+  border: 0px;
+}
+
+.cell-button {
+  background-color: color.$transparent;
+  width: 100%;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .list-page-toolbar {
+    padding-top: 30px;
+  }
+}

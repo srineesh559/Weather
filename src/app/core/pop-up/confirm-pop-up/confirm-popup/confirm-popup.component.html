@@ -1,0 +1,14 @@
+<div class="confirm-popup">
+  <mat-dialog-content>
+    <p>{{ confirmationString }}</p>
+  </mat-dialog-content>
+
+  <div mat-dialog-actions [align]="selectedAlign">
+    <button id="No" class="cancel action-btn" (click)="cancelClick()">
+      No
+    </button>
+    <button id="Yes" class="success action-btn" (click)="okClick(true)">
+      Yes
+    </button>
+  </div>
+</div>

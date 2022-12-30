@@ -1,0 +1,52 @@
+<div class="detail-group">
+  <div class="detail-container">
+    <div class="item item-1">
+      <p>{{ weather?.name }}</p>
+    </div>
+    <button type="button" class="transparent-button" (click)="changeFavourite()">
+      <div class="item item-2">
+        <div class="add-button">
+          <img src="{{ getbuttonImage() }}" width="20px" height="20px" />
+        </div>
+        <div class="add-button" [ngStyle]="{ color: getColor() }">
+          <span>{{ getbuttonTitle() }}</span>
+        </div>
+      </div>
+    </button>
+  </div>
+
+  <div class="detail-center-data">
+    <img src="{{ getIcon() }}" />
+
+    <div class="detail-column">
+      <div class="detail-temperature">
+        <p>{{ getTemperature() }}</p>
+      </div>
+      <button type="button" class="transparent-button" (click)="changeTemperatureConv()">
+        <div class="convert-button">
+          <div [ngClass]="tempDegree === 'true' ? 'degree item1' : 'degree item2'">
+            <span>&#176;C</span>
+          </div>
+          <div [ngClass]="tempDegree === 'true' ? 'degree item2' : 'degree item1'">
+            <span>&#176;F</span>
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <div class="temperature-desc">
+      <p>{{ getWeatherDescription() }}</p>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>
+
+<div class="row">
+  <div *ngFor="let weather of weatherAttributes; trackBy: trackItem">
+    <app-weather-property-view
+      title="{{ weather.title }}"
+      icon="{{ weather.icon }}"
+      value="{{ weather.value }}"
+    ></app-weather-property-view>
+  </div>
+</div>

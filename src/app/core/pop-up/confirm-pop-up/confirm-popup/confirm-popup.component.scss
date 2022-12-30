@@ -1,0 +1,46 @@
+@use "../../../../../assets/sass/variables";
+@use "../../../../../assets/sass/color";
+
+.confirm-popup {
+  width: 458px;
+  height: 210px;
+  align-items: center;
+
+  p {
+    color: color.$Text_Primary;
+    font-family: variables.$font-family-regular;
+    font-size: 15px;
+    line-height: 18px;
+    margin-top: 58px;
+    margin-bottom: 37px;
+    text-align: center;
+  }
+
+  .action-btn {
+    width: 106px;
+    font-family: variables.$font-family-medium;
+    font-size: 15px;
+    border-color: color.$transparent;
+    background-color: color.$Page_Background;
+    height: 35px;
+    padding: 4px;
+  }
+}
+
+button:hover {
+  color: color.$Text_secondary;
+  cursor: pointer;
+  background-color: color.$theme !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .confirm-popup {
+    width: 229px;
+    height: 105px;
+
+    p {
+      margin-top: 8px;
+      margin-bottom: 17px;
+    }
+  }
+}

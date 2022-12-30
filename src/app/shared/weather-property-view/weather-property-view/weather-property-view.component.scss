@@ -1,0 +1,34 @@
+@use "../../../../assets/sass/variables";
+@use "../../../../assets/sass/color";
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  padding: 38px;
+  padding-top: 35px;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 0;
+}
+
+.property-title {
+  font-family: variables.$font-family-regular;
+  font-size: 15px;
+  color: color.$Text_secondary;
+}
+
+.property-value {
+  font-family: variables.$font-family-medium;
+  font-size: 22px;
+  color: color.$Text_secondary;
+}

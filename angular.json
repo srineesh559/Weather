@@ -25,7 +25,10 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images/background/*",
+              "src/assets/images/icons/*",
+              "src/assets/images/logo/*"
             ],
             "styles": [
               "src/styles.scss"
@@ -93,15 +96,22 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/images/background/*",
+              "src/assets/images/icons/*",
+              "src/assets/images/logo/*"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "assets/fonts/fonts.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

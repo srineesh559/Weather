@@ -1,0 +1,63 @@
+@use "../../../../assets/sass/variables";
+@use "../../../../assets/sass/color";
+
+.header-search-view {
+  width: 458px;
+  height: 45px;
+  border: 2px solid color.$transparent_Background;
+  opacity: 1;
+  border-radius: 3px;
+  background-color: color.$transparent_Background;
+  align-items: center;
+  position: relative;
+}
+
+.header-logo {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.header-search-input {
+  grid-area: searchtext;
+  background-color: color.$transparent;
+  height: 43px;
+  border: none;
+  position: absolute;
+  width: 97%;
+  padding-left: 14px;
+}
+
+.header-search-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+input {
+  border: none;
+  color: color.$Text_secondary;
+  font-family: variables.$font-family-regular;
+  font-size: 16px;
+  box-shadow: none;
+}
+
+input::placeholder {
+  color: color.$Text_secondary;
+  opacity: 0.8;
+  padding-left: 0px;
+  font-family: variables.$font-family-regular;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header-search-view {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="list-border" [ngStyle]="{ 'background-color': getbackgroundColor() }">
+  <div class="list-start" [ngStyle]="{ color: getTitleColor() }">
+    <p>{{ cityclimate?.name }}</p>
+  </div>
+  <div class="list-middle">
+    <div>
+      <img class="weather-status-icon" src="{{ getIcon() }}" />
+    </div>
+    <div class="degree">
+      <p>{{ cityclimate?.main?.temp }}</p>
+    </div>
+    <div class="degree-symbol"><span>&#176;C</span></div>
+    <div class="temperature">
+      <p>{{ getWeatherDescription() }}</p>
+    </div>
+  </div>
+
+  <button type="button" class="transparent-button" (click)="changeFavourite()">
+    <div class="list-last">
+      <div></div>
+      <img
+        class="item2"
+        src="{{ getbuttonImage() }}"
+        width="20px"
+        height="20px"
+      />
+    </div>
+  </button>
+</div>

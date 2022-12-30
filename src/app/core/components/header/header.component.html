@@ -1,0 +1,29 @@
+<div class="header-logo">
+  <img src="assets/images/logo/logo_web.svg" />
+  <div class="header-search-view">
+    <input
+      type="text"
+      class="header-search-input"
+      placeholder="{{ placeholder }}"
+      [(ngModel)]="userSearch"
+      (ngModelChange)="this.userSearchUpdate.next($event)"
+      [matAutocomplete]="auto"
+    />
+    <img class="header-search-icon" src="assets/images/icons/icon_search_white.svg" />
+  </div>
+</div>
+
+<mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+  <mat-option *ngFor="let option of cityList" [value]="option">
+    {{
+      Constants.City +
+        option.name +
+        ", " +
+        Constants.Country +
+        option.country +
+        ", " +
+        Constants.State +
+        option.state
+    }}
+  </mat-option>
+</mat-autocomplete>

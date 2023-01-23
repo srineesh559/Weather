@@ -35,6 +35,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   displayFn(loc: GeoLocation): string {
-    return loc.name;
+    return loc?.name;
   }
 }

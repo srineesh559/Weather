@@ -1,0 +1,39 @@
+<!-- <nav mat-tab-nav-bar>
+  <a mat-tab-link
+  *ngFor="let link of navLinks"
+  [routerLink]="link.link"
+  routerLinkActive #rla="routerLinkActive"
+  [active]="rla.isActive">
+  {{link.label}}
+  </a>
+ </nav>
+<router-outlet></router-outlet> -->
+<mat-tab-group animationDuration="0ms">
+  <mat-tab label="{{ Constants.home }}">
+    <app-weather-detail-page [weather]="selectedWeather" (favouritebtnClick)="changeFav()"> </app-weather-detail-page>
+  </mat-tab>
+  <mat-tab label="{{ Constants.favouite }}">
+    <app-weather-list-page
+      errorMessage="{{ Constants.noFavourites }}"
+      status="{{ getFaviouriteStatus() }}"
+      buttonName="{{ Constants.faviouriteButtonName }}"
+      [cityclimate]="getFavouiteCities()"
+      (favouritebtnClick)="changeFavourite($event)"
+      (removebtnClick)="clearAllFavourites()"
+      (onClick)="SetToHome($event)"
+    >
+    </app-weather-list-page>
+  </mat-tab>
+  <mat-tab label="{{ Constants.recentSearch }}">
+    <app-weather-list-page
+      errorMessage="{{ Constants.noSearchResults }}"
+      status="{{ Constants.recentSearchStatus }}"
+      buttonName="{{ Constants.recentSearchButtonName }}"
+      [cityclimate]="getSearchedCities()"
+      (favouritebtnClick)="changeFavourite($event)"
+      (removebtnClick)="clearRecentSearch()"
+      (onClick)="SetToHome($event)"
+    >
+    </app-weather-list-page>
+  </mat-tab>
+</mat-tab-group>

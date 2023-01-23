@@ -1,0 +1,11 @@
+<div class="home-background">
+  <div class="home-container">
+    <app-header (searchValue)="getCitiesBySearch($event)" [cityList]="cities"></app-header>
+    <div class="home-tab">
+      <div class="home-time">
+        <p>{{ today | date : 'EEE, d MMM y h:mm a' }}</p>
+      </div>
+      <app-hometab></app-hometab>
+  </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import { EventEmitter } from '@angular/core';
 import { Constants } from 'src/app/core/Utils/Constants';
 import { Colors } from 'src/app/core/Utils/Colors';
 import { Common } from 'src/app/core/Utils/Common';
+import { ActivatedRoute } from '@angular/router';
 
 export interface WeatherAttribute {
   icon: string;
@@ -26,7 +27,7 @@ export class WeatherDetailPageComponent implements OnInit {
 
   public weatherAttributes: WeatherAttribute[] = [];
   readonly Constants = Constants;
-  constructor() {
+  constructor(public route: ActivatedRoute) {
     this.tempDegree = localStorage.getItem(this.degreeKey);
     if (this.tempDegree) {
     }
@@ -51,6 +52,9 @@ export class WeatherDetailPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.data.subscribe(data => {
+      console.log(data);
+    });
     this.update();
   }
 
